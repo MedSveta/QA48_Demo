@@ -45,7 +45,9 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "example-modal-sizes-title-lg")
     WebElement modalMessage;
 
-
+    public boolean validateModalMessageNegative() {
+        return validateTextInElement(modalMessage, "Wrong message!");
+    }
     public boolean validateModalMessage() {
     return validateTextInElement(modalMessage, "Thanks for submitting the form");
     }
